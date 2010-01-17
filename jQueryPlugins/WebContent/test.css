@@ -1,0 +1,43 @@
+/* 
+    Document   : test.css
+    Created on : Dec 19, 2009, 2:42:16 PM
+    Author     : pkopriv2
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.pass {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
+
+ul.test-suite {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul.test-suite > li > ul.test-suite {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul.test-suite > li > table {
+    font-size: 14px;
+    font-weight: normal; 
+}
+
+ul > li {
+    list-style: none; 
+}
