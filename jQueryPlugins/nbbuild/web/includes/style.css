@@ -1,0 +1,299 @@
+/* 
+Document   : style
+Created on : Nov 5, 2009, 2:50:30 AM
+Author     : pkopriv2
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/* 
+TODO customize this sample style
+Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+root { 
+    display: block;
+
+}
+
+body {
+    font-family: "Trebuchet MS",Sans-Serif;
+}
+
+body a {
+    color: #333;
+}
+
+a:visited {
+    border: 1px dotted red;
+}
+
+
+/* CONTAINER STYLING */
+div.ui-tree-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+
+ul.ui-tree {
+    height: 298px;
+    overflow: auto;/*
+    border: 1px solid #aaa;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;*/
+    margin: 0px;
+}
+
+ul.loading {
+    background-image: url('../images/ajax-loader.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tree ul {
+    padding: 0px 0px 0px 0px;
+}
+
+/* TREE NODE STYLING */
+ul.ui-tree li.ui-tree-node {
+    list-style: none;
+    padding: 0px 0px 0px 16px;
+    line-height: 22px;
+    white-space: nowrap;
+}
+
+ul.ui-tree li.ui-tree-node.ui-tree-node-expanded {
+    background-image: url('../images/tree-node-expanded.gif');
+    background-repeat: no-repeat;
+    background-position: 0px 4px;
+}
+
+ul.ui-tree li.ui-tree-node.ui-tree-node-collapsed {
+    background-image: url('../images/tree-node-collapsed.gif');
+    background-repeat: no-repeat;
+    background-position: 0px 4px;
+}
+
+/** Interior node styling **/
+ul.ui-tree li.ui-tree-node > a {
+    display: inline-block;
+    width: 100px;
+    padding: 3px; 
+    text-decoration: none;
+    line-height: 16px;
+}
+
+ul.ui-tree li.ui-tree-node input[type='checkbox'] {
+    border: 1px solid #aaa;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+ul.ui-tree li.ui-tree-node > a span {
+    font-size: 12px;
+}
+
+ul.ui-tree li.ui-tree-node > a > ins {
+    float:left;
+    width: 16px;
+    height: 16px;
+    border-left: 1px solid #fff;
+    border-right: 3px solid #fff;
+}
+
+/** Selected Node **/
+ul.ui-tree li.ui-tree-node.ui-tree-node-selected > a {
+    background: #ddd none repeat scroll 0 0;
+}
+
+ul.ui-tree li.ui-tree-node.ui-tree-node-selected > a > ins {
+    background: #ddd none repeat scroll 0 0;
+    border-color: #ddd;
+}
+
+/** Hovered Node **/
+ul.ui-tree li.ui-tree-node > a:hover {
+    background: #eee none repeat scroll 0 0;
+}
+
+ul.ui-tree li.ui-tree-node > a:hover > ins {
+    background: #eee none repeat scroll 0 0;
+    border-color: #eee;
+}
+
+ul.ui-tree span.ui-tree-filter-matched {
+    background-color: #CEF1FF;
+}
+
+/* CONTEXT MENU STYLING */
+ul.ui-tree-contextmenu {
+    background: #eee none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 0px;
+    width: 150px;
+    display: block;
+}
+
+ul.ui-tree-contextmenu > li {
+    background: #eee none repeat scroll 0 0;
+    border-left: 1px solid #ccc;
+    height: 22px;
+    list-style: none;
+}
+
+ul.ui-tree-contextmenu > li > a {
+    color: black;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+ul.ui-tree-contextmenu > li > a:hover > span {
+    background-color: #ddd;
+}
+
+ul.ui-tree-contextmenu > li > a:hover > ins {
+    background-color: #ddd;
+    border-color: #ddd;
+}
+
+ul.ui-tree-contextmenu > li > a > span {
+    background: #eee;
+    padding: 0px 0px 0px 5px;
+    font-size: 10px;
+    display: block;
+    margin: 0 0 0 28px;
+    border-left: 1px solid #000;
+}
+
+ul.ui-tree-contextmenu > li > a > ins {
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-position: 0px 0px;
+    border-style: solid;
+    border-width: 3px 5px 3px 6px;
+    line-height: 16px;
+    background-color: #eee;
+    border-color: #eee;
+}
+
+/** MENU STYLING **/
+div.ui-tree-menu {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+
+    height: 24px;
+    width: 80px;
+}
+
+div.ui-tree-menu a {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 0px;
+    margin-left: 8px;
+    margin-top: 4px; 
+}
+
+div.ui-tree-menu a.search {
+    background-image: url('../images/icons/magnify.png');
+    background-repeat: no-repeat;
+}
+
+div.ui-tree-menu a.refresh {
+    background-image: url('../images/icons/refresh.png');
+    background-repeat: no-repeat;
+}
+
+div.ui-tree-menu a.about {
+    background-image: url('../images/icons/info.png');
+    background-repeat: no-repeat;
+}
+
+/** POPUP PANEL STYLING **/
+div.ui-tree-popup-panel {
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+
+    padding: 5px;
+    margin: 0px; 
+}
+
+div.ui-tree-popup-panel > a {
+    width: 16px;
+}
+
+div.ui-tree-popup-panel > span {
+    padding: 0px;
+    margin: 0px; 
+}
+
+
+/** MAIN PANEL STYLING **/
+div.ui-tree-main-panel {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-top: none;
+    width: 300px;
+    padding: 0px;
+    position: relative;
+}
+
+div.ui-tree-main-panel > a {
+    left: 0px; 
+    height: 100%;
+    width: 5px;
+
+    border: 1px solid black; 
+}
+
+div.ui-tree-main-panel > a[href='#navRight'] {
+    right: 0px;
+    width: 5px;
+
+    border: 1px solid black;
+}
+
+div.ui-tree-main-panel > ul {
+    display: inline;
+    border: 1px solid black;
+}
+
+div.ui-tree-main-panel > ul > li {
+    display: inline;
+    list-style: none; 
+}
+
+/** FILTER STYLING ***/
+input.ui-tree-filter-search {
+    border: 1px solid #aaa;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+input.ui-tree-filter-search .watermark {
+    color: #aaa;
+}
+
+
+/** CHECKABLE STYLING **/
+div.ui-tree-checkable-menu input {
+    width: 55px;
+    margin: 1px 5px 1px 0px;
+    border: 1px solid #aaa;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+div.ui-tree-checkable-menu input:hover {
+    background: #eee;
+}
